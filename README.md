@@ -1,3 +1,6 @@
-# My Awesome Book
+# A summary of LeetCode problem
 
-This file file serves as your book's preface, a great place to describe your book's content and ideas.
+This book is used to record my understanding on solving the problem of LeetCode. I will divide this book into serveral parts and each part have be an independent topic, just like the tag of the problem.  
+
+For the reason why I write those down, it is quite simple. I just want to **reoriginize my thoughts** when I finish a problem. It will be helpful for you to understand the essence of the problem.
+
