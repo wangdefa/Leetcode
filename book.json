@@ -3,10 +3,10 @@
     "plugins" : [
         "include-codeblock",
         "ace"
-    ]
+    ],
     "pluginsConfig": {
         "include-codeblock": {
-            "template": "ace", // or acefull
+            "template": "ace"
         }
     }
 }
