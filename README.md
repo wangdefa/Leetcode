@@ -12,11 +12,13 @@ The forth part of this book will be math and bit manipulation;
 
 The fifth part of this book will be linked list;
 
-The sixed part of this book will be binary trees;
+The sixed part of this book will be binary search trees;
 
-The seventh part of this book will be dynamic programming;
+The seventh part of this book will be exhaustive search;
 
-The eighth part of this book will be graph;
+The eighth part of this book will be dynamic programming;
+
+The ninth part of this book will be graph;
 
 The tenth part of this book will be data structure;
 
