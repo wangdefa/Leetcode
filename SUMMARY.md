@@ -1,7 +1,9 @@
 # Summary
 
 * [Introduction](README.md)
-* \[chapter 2\]\(chapter 1 - string.md\)
+
+* [Chapter 1. string](/chapter 1 - string.md)
+
 * 
 
 
