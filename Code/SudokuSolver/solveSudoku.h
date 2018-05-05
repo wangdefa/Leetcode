@@ -29,6 +29,8 @@ public:
     Solution(){
         node_now = Node(-1, -1, 'a');
     }
+
+public:
     void solveSudoku() {
         if (!initTable()) return; // the init problem is not solvable
         
