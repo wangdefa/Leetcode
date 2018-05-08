@@ -8,9 +8,31 @@ project(LeetCode)
 add_compile_options(-std=c++11)
 
 # Add source files and build
-set(SRC_SudokuSolver ./SudokuSolver/test.cpp)
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ./7_ExhaustedSearch/)
+set(SRC_SudokuSolver ./ExhaustedSearch/SudokuSolver/test.cpp)
 add_executable(SudokuSolver ${SRC_SudokuSolver})
 
 # Add source files and build
-set(SRC_CombinationSum ./CombinationSum/test.cpp)
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ./7_ExhaustedSearch/)
+set(SRC_CombinationSum ./ExhaustedSearch/CombinationSum/test.cpp)
 add_executable(CombinationSum ${SRC_CombinationSum})
+
+# Add source files and build
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ./1_String/)
+set(SRC_BasicUsage ./String/BasicUsage/test.cpp)
+add_executable(BasicUsage ${SRC_BasicUsage})
+
+# Add source files and build
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ./0_BasicDataStructure/)
+set(SRC_LinkedList ./BasicDataStructure/LinkedList/test.cpp)
+add_executable(LinkedList ${SRC_LinkedList})
+
+# Add source files and build
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ./0_BasicDataStructure/)
+set(SRC_Tree ./BasicDataStructure/Tree/test.cpp)
+add_executable(Tree ${SRC_Tree})
+
+# Add source files and build
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ./0_BasicDataStructure/)
+set(SRC_Heap ./BasicDataStructure/Heap/test.cpp)
+add_executable(Heap ${SRC_Heap})
