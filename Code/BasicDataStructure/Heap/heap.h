@@ -30,6 +30,7 @@ class Heap
         int32_t GetFirstInnerNode();
         void Insert(T data);
         bool Delete();
+        std::size_t Size();
         T Get(); // Get the element of the top
         bool Empty(); // if the present heap is empty or not
         void Serilize();
@@ -193,6 +194,11 @@ template <class T>
 bool Heap<T>::Empty()
 {
     return heap.empty();
+}
+template <class T>
+std::size_t Heap<T>::Size()
+{
+    return heap.size();
 }
 template <class T>
 void Heap<T>::Serilize()

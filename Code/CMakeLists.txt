@@ -36,3 +36,18 @@ add_executable(Tree ${SRC_Tree})
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ./0_BasicDataStructure/)
 set(SRC_Heap ./BasicDataStructure/Heap/test.cpp)
 add_executable(Heap ${SRC_Heap})
+
+# Add source files and build
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ./0_BasicDataStructure/)
+set(SRC_HuffmanTree ./BasicDataStructure/HuffmanTree/test.cpp)
+add_executable(HuffmanTree ${SRC_HuffmanTree})
+
+# Add source files and build
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ./0_BasicDataStructure/)
+set(SRC_Queue ./BasicDataStructure/Queue/test.cpp)
+add_executable(Queue ${SRC_Queue})
+
+# Add source files and build
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ./0_BasicDataStructure/)
+set(SRC_PriorityQueue ./BasicDataStructure/PriorityQueue/test.cpp)
+add_executable(PriorityQueue ${SRC_PriorityQueue})
