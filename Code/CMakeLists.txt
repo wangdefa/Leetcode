@@ -18,6 +18,11 @@ set(SRC_CombinationSum ./ExhaustedSearch/CombinationSum/test.cpp)
 add_executable(CombinationSum ${SRC_CombinationSum})
 
 # Add source files and build
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ./7_ExhaustedSearch/)
+set(SRC_BuyStocks ./ExhaustedSearch/BuyStocks/test.cpp)
+add_executable(BuyStocks ${SRC_BuyStocks})
+
+# Add source files and build
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ./1_String/)
 set(SRC_BasicUsage ./String/BasicUsage/test.cpp)
 add_executable(BasicUsage ${SRC_BasicUsage})
