@@ -54,5 +54,25 @@ add_executable(Queue ${SRC_Queue})
 
 # Add source files and build
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ./0_BasicDataStructure/)
+set(SRC_Stack ./BasicDataStructure/Stack/test.cpp)
+add_executable(Stack ${SRC_Stack})
+
+# Add source files and build
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ./0_BasicDataStructure/)
+set(SRC_Sort ./BasicDataStructure/Sort/test.cpp)
+add_executable(Sort ${SRC_Sort})
+
+# Add source files and build
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ./0_BasicDataStructure/)
+set(SRC_DivideConquer ./BasicDataStructure/DivideConquer/test.cpp)
+add_executable(DivideConquer ${SRC_DivideConquer})
+
+# Add source files and build
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ./0_BasicDataStructure/)
+set(SRC_HashTable ./BasicDataStructure/HashTable/test.cpp)
+add_executable(HashTable ${SRC_HashTable})
+
+# Add source files and build
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ./0_BasicDataStructure/)
 set(SRC_PriorityQueue ./BasicDataStructure/PriorityQueue/test.cpp)
 add_executable(PriorityQueue ${SRC_PriorityQueue})

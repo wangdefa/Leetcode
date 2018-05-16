@@ -10,5 +10,3 @@ int main(){
 	display(res);
 	return 0;
 }
-
-
