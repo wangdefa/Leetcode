@@ -64,6 +64,11 @@ add_executable(Sort ${SRC_Sort})
 
 # Add source files and build
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ./0_BasicDataStructure/)
+set(SRC_Knapsack ./BasicDataStructure/Knapsack/test.cpp)
+add_executable(Knapsack ${SRC_Knapsack})
+
+# Add source files and build
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ./0_BasicDataStructure/)
 set(SRC_DivideConquer ./BasicDataStructure/DivideConquer/test.cpp)
 add_executable(DivideConquer ${SRC_DivideConquer})
 
