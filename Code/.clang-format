@@ -1,0 +1,13 @@
+BasedOnStyle: Google
+# IndentWidth: 4
+# MaxEmptyLinesToKeep: 4
+# BreakBeforeBraces: Attach
+# AllowShortIfStatementsOnASingleLine: true
+# IndentCaseLabels: true
+# ObjCBlockIndentWidth: 4
+# ObjCSpaceAfterProperty: true
+# ColumnLimit: 0
+# AlignTrailingComments: true
+# SpaceAfterCStyleCast: true
+# SpacesInParentheses: false
+# SpacesInSquareBrackets: false
