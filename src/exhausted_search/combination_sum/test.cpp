@@ -1,4 +1,4 @@
-#include "CombinationSum.h"
+#include "combination_sum.h"
 
 int main() {
   // input

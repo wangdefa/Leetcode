@@ -4,7 +4,7 @@
 #include <string>
 #include <unordered_map>
 #include <vector>
-#include "../Heap/heap.h"
+#include "../heap/heap.h"
 #include "assert.h"
 #include "stdint.h"
 

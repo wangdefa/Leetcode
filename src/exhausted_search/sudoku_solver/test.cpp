@@ -1,4 +1,4 @@
-#include "solveSudoku.h"
+#include "solve_sudoku.h"
 
 int main() {
   // input

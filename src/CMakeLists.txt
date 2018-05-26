@@ -8,81 +8,81 @@ project(LeetCode)
 add_compile_options(-std=c++11)
 
 # Add source files and build
-set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ./7_ExhaustedSearch/)
-set(SRC_SudokuSolver ./ExhaustedSearch/SudokuSolver/test.cpp)
-add_executable(SudokuSolver ${SRC_SudokuSolver})
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ./exhausted_search/)
+set(SRC_sudoku_solver ./exhausted_search/sudoku_solver/test.cpp)
+add_executable(sudoku_solver ${SRC_sudoku_solver})
 
 # Add source files and build
-set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ./7_ExhaustedSearch/)
-set(SRC_CombinationSum ./ExhaustedSearch/CombinationSum/test.cpp)
-add_executable(CombinationSum ${SRC_CombinationSum})
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ./exhausted_search/)
+set(SRC_combination_sum ./exhausted_search/combination_sum/test.cpp)
+add_executable(combination_sum ${SRC_combination_sum})
 
 # Add source files and build
-set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ./7_ExhaustedSearch/)
-set(SRC_BuyStocks ./ExhaustedSearch/BuyStocks/test.cpp)
-add_executable(BuyStocks ${SRC_BuyStocks})
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ./exhausted_search/)
+set(SRC_buy_stocks ./exhausted_search/buy_stocks/test.cpp)
+add_executable(buy_stocks ${SRC_buy_stocks})
 
 # Add source files and build
-set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ./1_String/)
-set(SRC_BasicUsage ./String/BasicUsage/test.cpp)
-add_executable(BasicUsage ${SRC_BasicUsage})
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ./string/)
+set(SRC_basic_usage ./string/basic_usage/test.cpp)
+add_executable(basic_usage ${SRC_basic_usage})
 
 # Add source files and build
-set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ./0_BasicDataStructure/)
-set(SRC_LinkedList ./BasicDataStructure/LinkedList/test.cpp)
-add_executable(LinkedList ${SRC_LinkedList})
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ./basic_data_structure/)
+set(SRC_linked_list ./basic_data_structure/linked_list/test.cpp)
+add_executable(linked_list ${SRC_linked_list})
 
 # Add source files and build
-set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ./0_BasicDataStructure/)
-set(SRC_Tree ./BasicDataStructure/Tree/test.cpp)
-add_executable(Tree ${SRC_Tree})
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ./basic_data_structure/)
+set(SRC_tree ./basic_data_structure/tree/test.cpp)
+add_executable(tree ${SRC_tree})
 
 # Add source files and build
-set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ./0_BasicDataStructure/)
-set(SRC_Heap ./BasicDataStructure/Heap/test.cpp)
-add_executable(Heap ${SRC_Heap})
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ./basic_data_structure/)
+set(SRC_heap ./basic_data_structure/heap/test.cpp)
+add_executable(heap ${SRC_heap})
 
 # Add source files and build
-set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ./0_BasicDataStructure/)
-set(SRC_HuffmanTree ./BasicDataStructure/HuffmanTree/test.cpp)
-add_executable(HuffmanTree ${SRC_HuffmanTree})
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ./basic_data_structure/)
+set(SRC_huffman_tree ./basic_data_structure/huffman_tree/test.cpp)
+add_executable(huffman_tree ${SRC_huffman_tree})
 
 # Add source files and build
-set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ./0_BasicDataStructure/)
-set(SRC_Queue ./BasicDataStructure/Queue/test.cpp)
-add_executable(Queue ${SRC_Queue})
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ./basic_data_structure/)
+set(SRC_queue ./basic_data_structure/queue/test.cpp)
+add_executable(queue ${SRC_queue})
 
 # Add source files and build
-set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ./0_BasicDataStructure/)
-set(SRC_Stack ./BasicDataStructure/Stack/test.cpp)
-add_executable(Stack ${SRC_Stack})
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ./basic_data_structure/)
+set(SRC_stack ./basic_data_structure/stack/test.cpp)
+add_executable(stack ${SRC_stack})
 
 # Add source files and build
-set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ./0_BasicDataStructure/)
-set(SRC_Sort ./BasicDataStructure/Sort/test.cpp)
-add_executable(Sort ${SRC_Sort})
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ./basic_data_structure/)
+set(SRC_sort ./basic_data_structure/sort/test.cpp)
+add_executable(sort ${SRC_sort})
 
 # Add source files and build
-set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ./0_BasicDataStructure/)
-set(SRC_Knapsack ./BasicDataStructure/Knapsack/test.cpp)
-add_executable(Knapsack ${SRC_Knapsack})
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ./basic_data_structure/)
+set(SRC_knapsack ./basic_data_structure/knapsack/test.cpp)
+add_executable(knapsack ${SRC_knapsack})
 
 # Add source files and build
-set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ./0_BasicDataStructure/)
-set(SRC_Random ./BasicDataStructure/Random/test.cpp)
-add_executable(Random ${SRC_Random})
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ./basic_data_structure/)
+set(SRC_random ./basic_data_structure/random/test.cpp)
+add_executable(random ${SRC_random})
 
 # Add source files and build
-set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ./0_BasicDataStructure/)
-set(SRC_DivideConquer ./BasicDataStructure/DivideConquer/test.cpp)
-add_executable(DivideConquer ${SRC_DivideConquer})
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ./basic_data_structure/)
+set(SRC_divide_conquer ./basic_data_structure/divide_conquer/test.cpp)
+add_executable(divide_conquer ${SRC_divide_conquer})
 
 # Add source files and build
-set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ./0_BasicDataStructure/)
-set(SRC_HashTable ./BasicDataStructure/HashTable/test.cpp)
-add_executable(HashTable ${SRC_HashTable})
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ./basic_data_structure/)
+set(SRC_hash_table ./basic_data_structure/hash_table/test.cpp)
+add_executable(hash_table ${SRC_hash_table})
 
 # Add source files and build
-set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ./0_BasicDataStructure/)
-set(SRC_PriorityQueue ./BasicDataStructure/PriorityQueue/test.cpp)
-add_executable(PriorityQueue ${SRC_PriorityQueue})
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ./basic_data_structure/)
+set(SRC_priority_queue ./basic_data_structure/priority_queue/test.cpp)
+add_executable(priority_queue ${SRC_priority_queue})

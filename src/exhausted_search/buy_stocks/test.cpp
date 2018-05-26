@@ -1,4 +1,4 @@
-#include "buyStocks.h"
+#include "buy_stocks.h"
 
 int main() {
   // input

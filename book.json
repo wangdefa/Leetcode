@@ -15,6 +15,7 @@
     }
   },
   "plugins": [
+    "katex",
     "-lunr",
     "-search",
     "-highlight",
