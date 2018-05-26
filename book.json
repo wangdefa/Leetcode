@@ -5,9 +5,9 @@
   "output.name": "site",
   "language": "zh-hans",
   "gitbook": "3.2.3",
-  "root": ".",
+  "root": "./docs",
   "structure": {
-    "readme": "SUMMARY.md"
+    "readme": "README.md"
   },
   "links": {
     "sidebar": {

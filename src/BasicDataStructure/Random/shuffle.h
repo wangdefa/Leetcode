@@ -69,4 +69,4 @@ class ReservoiorSampling {
     // AlgorithmAChao:
     //  it is a sampling algorithm which takes the weight into consideration
   }
-} ；
+};
