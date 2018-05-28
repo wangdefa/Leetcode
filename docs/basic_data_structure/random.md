@@ -6,7 +6,7 @@ In this part, we will focus on the random algorithm, such as shuffle, reservoir 
 
 ##### Problem description
 
-给定一组数据，给出这组数据的一个随机排列。  
+给定一组数据，给出这组数据的一个随机排列(**排列问题**)。  
 eg.  
 　　input: {1, 3, 2, 5}   
 　　output can be: {2, 3, 1, 5} or {5, 2, 1, 3}...
@@ -50,23 +50,38 @@ Ignored.
 
 #### Reservoir Sample
 
-{%ace edit=true, lang='c_cpp'%}
+##### Problem description
+
+给定一组数据，从中进行不放回的随机抽取$$k$$个数(**组合问题**)。  
+eg.  
+　　input: {1, 3, 2, 5}，　k = 2;   
+　　output can be: {2, 3} or {1, 3}...
+
+##### Algorithm description and certification
+
+假设输入为：　$$ arr[sz] $$, $$k$$, 并且$$ {k}\leq{sz} $$可以有如下算法：
+
+```cpp
+// initialize
+assert(k <= sz);
+res[0:k] = arr[0:k]; // 区间为：　[0, k)
+for (i = k; i < sz; i++)
+  r = rand() % (i + 1);
+  if (r < k)
+    res[r] = arr[i];
+```
+
+1. 若 $$ sz=k $$, 那么初始化会搞定这个问题，即每个元素都会被选中;
+2. 若 $$ sz=(k+1) $$, 那么当 $$ i=k $$时，新元素被加入到结果当中的概率为：　$$\frac{k}{k+1}$$, 已经放入结果当中的元素继续存在于结果当中的概率也为：$$\frac{k}{k+1}$$;
+3. 当 $$ sz > \left(k+1\right) $$, 同理可以推出上述结果。
+
+##### Code
+
+```cpp
 void AlgorithmR() {
-  // AlgorithmR:
-  //  it is a sampling algorithm without taking the weight into consideration
-  // Proof:
-  //  Define the probability of element index (count from 0) i is still in the
-  //  pool is p(i);
-  //  if (i < m_k)
-  //    p(i) = 1 * (m_k / (m_k+1)) * ((m_k+1) / (m_k+2)) *... ((n-1) / n)
-  //         = m_k / n
-  //  else
-  //    p(i) = (m_k / (i+1)) * ((i+1) / (i+2)) *... ((n-1) / n) = m_k / n
-  // Special case
   res.clear();
-  if (m_k > m_data.size()) {
-    assert(false && "Invalid sampling problem here.");
-  }
+  m_res.resize(m_k);
+  assert(m_k < m_data.size() && "Invalid sampling problem here.");
   // Initialize
   for (uint32_t i = 0; i < m_k; i++) {
     res[i] = m_data[i];
@@ -80,4 +95,12 @@ void AlgorithmR() {
     }
   }
 }
-{%endace%}
+```
+
+##### Test
+
+Ignored.
+
+##### Reference
+Also, there are some other extension of the sampling algorithm, just like **weighted sampling algorithm**, you can refer to [Wikipedia](https://en.wikipedia.org/wiki/Reservoir_sampling) for more information.
+

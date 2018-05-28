@@ -24,7 +24,7 @@ struct Node {
 class ReservoiorSampling {
  private:
   std::vector<Node> m_data;  // used to save all the value and weight
-  std::vector<Node> res;
+  std::vector<Node> m_res;
   uint32_t m_k;  // the number of samples
 
  public:
@@ -45,14 +45,13 @@ class ReservoiorSampling {
     //    p(i) = (m_k / (i+1)) * ((i+1) / (i+2)) *... ((n-1) / n) = m_k / n
 
     // Special case
-    res.clear();
-    if (m_k > m_data.size()) {
-      assert(false && "Invalid sampling problem here.");
-    }
+    m_res.clear();
+    m_res.resize(m_k);
+    assert(m_k < m_data.size() && "Invalid sampling problem here.");
 
     // Initialize
     for (uint32_t i = 0; i < m_k; i++) {
-      res[i] = m_data[i];
+      m_res[i] = m_data[i];
     }
 
     // Load data from the disk and update the Node(data) in the pool
@@ -60,7 +59,7 @@ class ReservoiorSampling {
     for (uint32_t i = m_k; i < m_data.size(); i++) {
       uint32_t r = rand() % (i + 1);
       if (r < m_k) {
-        res[r] = m_data[i];
+        m_res[r] = m_data[i];
       }
     }
   }
@@ -68,5 +67,12 @@ class ReservoiorSampling {
   void AlgorithmAChao() {
     // AlgorithmAChao:
     //  it is a sampling algorithm which takes the weight into consideration
+  }
+
+  void Serilize() {
+    for (auto data : m_res) {
+      std::cout << data.val << "\t";
+    }
+    std::cout << std::endl;
   }
 };
