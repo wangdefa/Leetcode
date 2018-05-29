@@ -86,3 +86,8 @@ add_executable(hash_table ${SRC_hash_table})
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ./basic_data_structure/)
 set(SRC_priority_queue ./basic_data_structure/priority_queue/test.cpp)
 add_executable(priority_queue ${SRC_priority_queue})
+
+# Add source files and build
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ./basic_data_structure/)
+set(SRC_bit_set ./basic_data_structure/bit_set/test.cpp)
+add_executable(bit_set ${SRC_bit_set})

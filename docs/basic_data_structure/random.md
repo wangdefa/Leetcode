@@ -27,7 +27,7 @@ eg.
 
 ##### Code
 
-{%ace edit=true, lang='c_cpp'%}
+```cpp
 void Shuffle(std::vector<uint32_t> *src) {
   srand((unsigned)time(NULL));
   const uint32_t sz = src->size();
@@ -38,7 +38,7 @@ void Shuffle(std::vector<uint32_t> *src) {
     (*src)[sz - i - 1] = tmp;
   }
 }
-{%endace%}
+```
 
 ##### Test
 
