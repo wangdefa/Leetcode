@@ -5,9 +5,9 @@ Bit set can be viewed as a kind of data structure just like the set. The differe
 
 #### Sort/Search/Remove duplicates
 
-  **Sort**: 使用 bit set 数据结构对数据进行排序，假设所有的数据不会重复；
-  **Search**: 使用 bit set 实现一个set数据结构，从而进行检测数据是否在集合当中；
-  **Remove duplicates**: 使用 bit set 实现一个set数据结构，从而对数据进行去重；
+  **Sort**: 使用 bit set 数据结构对数据进行排序，假设所有的数据不会重复；  
+  **Search**: 使用 bit set 实现一个set数据结构，从而进行检测数据是否在集合当中；  
+  **Remove duplicates**: 使用 bit set 实现一个set数据结构，从而对数据进行去重；  
   以上三种应用的方式都非常类似，以下仅仅以sort为例进行说明。
 
 ##### Problem description
@@ -19,7 +19,7 @@ eg.
 
 ##### Algorithm description and certification
 
-假设输入为： arr[n], \\ \leq{arr[n]}{N} \\那么可以有如下算法：
+假设输入为： arr[n], \\(\leq{arr[n]}{N}\\)那么可以有如下算法：
 
   ```cpp
   // 1. Create the bit set data structure
