@@ -19,7 +19,7 @@ eg.
 
 ##### Algorithm description and certification
 
-假设输入为： arr[n], \\(\leq{arr[n]}{N}\\)那么可以有如下算法：
+假设输入为： arr[n], ${arr[n]}\leq{N}$那么可以有如下算法：
 
   ```cpp
   // 1. Create the bit set data structure
