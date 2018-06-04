@@ -70,7 +70,7 @@ void Sort(std::vector<uint32_t> *src) {
 
 ---
 
-## Bloom filter
+### Bloom filter
 
 Bloom filter与 Bit set非常类似，其一般被用于判断某个元素是否存在与某个集合当中。与Bit Set 不同的是，Bloom filter需要用多个比特来表示一个元素是否存在(多个元素也可以复用这些bit)。
 
@@ -112,7 +112,7 @@ return true; // passed all the test
 2. **无法删除**一个$key$,因为多个元素复用了存储空间；
 3. 对于false positive, 算法有**一定的误判概率**。即某个元素本来不在集合当中，但是在判断的时候返回的是存在于集合当中。
 
-* False positive的概率推导
+* False positive的概率推导与解释
 
 | Varible   | Explanation                                               |
 | :-------- | --------------------------------------------------------- |
@@ -165,7 +165,7 @@ $$
   $$
   对上式进程整理可以得到：
 
-  
+
   $$
   y'=\frac {\Delta y} {\Delta K} = y \times({\ln{(1-e^{{-K}\times{r}})}} +\frac{{K}\times{r}\times{e^{{-K}\times{r}}}} {1-e^{{-K}\times{r}}})
   $$
@@ -222,7 +222,11 @@ $$
 
   
 
-  Reference
+  #### Code
+
+  
+
+  #### Reference
 
     1. [布隆过滤器(Bloom Filter)详解](https://www.cnblogs.com/liyulong1982/p/6013002.html)
     2. [Wikipedia: Bloom Filter](https://en.wikipedia.org/wiki/Bloom_filter)
