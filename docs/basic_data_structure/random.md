@@ -2,7 +2,7 @@
 
 [TOC]
 
-In this part, we will focus on the random algorithm, such as shuffle, reservoir sample problems.
+In this part, we will focus on the random algorithm, such as shuffle, reservoir sample problems and weighted reservoir sample problems.
 
 ---
 
@@ -215,7 +215,41 @@ for each i = [0, size):
 #### Code
 
 ```cpp
+void AlgorithmARes() {
+  // AlgorithmARes:
+  //  it is a sampling algorithm which takes the weight into consideration
+  // Initialize
+  m_res.clear();
+  assert(m_k < m_data.size() && "Invalid sampling problem here.");
+  for (uint32_t index = 0; index < m_k; index++) {
+    double r_i =
+        pow(rand() / double(RAND_MAX), 1 / double(m_data[index].weight));
+    m_res.push_back(Node(r_i, m_data[index].val));
+  }
+  std::make_heap(m_res.begin(), m_res.end());
+  
+  // Update
+  for (uint32_t index = m_k; index < m_data.size(); index++) {
+    double r_i =
+        pow(rand() / double(RAND_MAX), 1 / double(m_data[index].weight));
+    if (r_i > m_res.front().weight) {
+      std::pop_heap(m_res.begin(), m_res.end());  // delete operation of heap
+      m_res.pop_back();  // we use the vector to delete
+      m_res.push_back(Node(r_i, m_data[index].val));
+      std::push_heap(m_res.begin(), m_res.end());
+    }
+  }
+}
+```
 
+Below is the test result of the afore mentioned two algorithms. Please notice the result of algorithm A-Res, it may be a little different from what you think, since there is a truncate error when we using the  probility.
+
+```shell
+$ ./basic_data_structure/random 	
+Input entry and it's weight:
+Entry & weight	a(8)	b(3)	c(3)	d(1)	e(7)	f(7)	g(2)	h(3)	i(6)	j(10)	
+AlgorithmR	   0.0993	0.0999	0.10058	0.10017	0.09958	0.09938	0.1004	0.10062	0.09983	0.10024	
+AlgorithmA-Res	0.14395	0.07394	0.07367	0.02743	0.13572	0.13467	0.05405	0.074	0.12375	0.15882
 ```
 
 
