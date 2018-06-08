@@ -6,17 +6,18 @@
 
 [TOC]
 
----
-
 In this part, we will focus on the bit set related algorithm, such as **sort of big data**, **search of big data**, **remove duplicate of big data**, **bloom filter**, etc.  
 Bit set 可以被视为集合[Set](https://en.wikipedia.org/wiki/Set_(abstract_data_type))这种数据结构， 但是二者之间的主要差异是Bit set 一般仅仅用一个或者几个bit来表示一个元素, 而Set需要存储元素本身。
 
 ### Sort/Search/Remove duplicates using bitset
 
-    1. Sort: 使用 bit set 数据结构对数据进行排序，假设所有的数据不会重复；  
-    2. Search: 使用 bit set 实现一个set数据结构，从而进行检测数据是否在集合当中；  
-    3. Remove duplicates: 使用 bit set 实现一个set数据结构，从而对数据进行去重；  
-       以上三种应用的方式都非常类似，以下仅仅以sort为例进行说明。
+---
+
+1. Sort: 使用 bit set 数据结构对数据进行排序，假设所有的数据不会重复；  
+2. Search: 使用 bit set 实现一个set数据结构，从而进行检测数据是否在集合当中；  
+3. Remove duplicates: 使用 bit set 实现一个set数据结构，从而对数据进行去重；  
+   以上三种应用的方式都非常类似，以下仅仅以sort为例进行说明。
+
 #### Problem description
 
 给定一组不含重复元素的数据(数据的数量非常多, 难以放入内存)以及其**范围**，给出其排列后的结果(**排序问题**)。  
@@ -68,9 +69,9 @@ void Sort(std::vector<uint32_t> *src) {
 
 [Bitmap in big data](https://www.cnblogs.com/yangjiannr/p/da-shu-ju-chu-libitmap.html)
 
----
-
 ### Bloom filter
+
+---
 
 Bloom filter与 Bit set非常类似，其一般被用于判断某个元素是否存在与某个集合当中。与Bit Set 不同的是，Bloom filter需要用多个比特来表示一个元素是否存在(多个元素也可以复用这些bit)。
 
@@ -166,9 +167,9 @@ $$
   对上式进程整理可以得到：
 
 
-  $$
+$$
   y'=\frac {\Delta y} {\Delta K} = y \times({\ln{(1-e^{{-K}\times{r}})}} +\frac{{K}\times{r}\times{e^{{-K}\times{r}}}} {1-e^{{-K}\times{r}}})
-  $$
+$$
   当然，我们也可以直接用matlab等比较成熟的工具帮助我们进行求偏导，如下所示：
 
   ```matlab
@@ -179,9 +180,9 @@ $$
   ```
 
   $\because$ $y>0$, 那么若我们设：$t={K}\times{r}$, 那么有：
-  $$
+$$
   f(t) ={\ln{(1-e^{-t})}} +\frac{{t}\times{e^{{-t}}}} {1-e^{{-t}}}
-  $$
+$$
   求这个式子的**零点**比较难，因此我们借助于matlab绘制出$f(x)$的图像如下:
 
   <img src="assets/diff_bloom_filter.jpg" style="zoom:50%" />
@@ -228,5 +229,5 @@ $$
 
   #### Reference
 
-    1. [布隆过滤器(Bloom Filter)详解](https://www.cnblogs.com/liyulong1982/p/6013002.html)
-    2. [Wikipedia: Bloom Filter](https://en.wikipedia.org/wiki/Bloom_filter)
+1. [布隆过滤器(Bloom Filter)详解](https://www.cnblogs.com/liyulong1982/p/6013002.html)
+2. [Wikipedia: Bloom Filter](https://en.wikipedia.org/wiki/Bloom_filter)

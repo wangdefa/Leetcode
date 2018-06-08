@@ -94,7 +94,7 @@ for (i = k; i < sz; i++)
    \begin{aligned}
    p(j) &= \frac{k}{k+1}\times\frac{k+1}{k+2}\\
    &=\frac{k}{k+2}\\
-   &=\frac k sz
+   &=\frac {k} {sz}
    \end{aligned}
    \end{equation}
    $$

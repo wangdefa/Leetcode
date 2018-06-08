@@ -47,3 +47,14 @@
 
 ### Dynamic Programming
 - [ ] [Knapsack](./dynamic_programming/knapsack.md)
+
+
+
+
+
+---
+
+### Misc
+
+* For the random algorithm, maybe I should have a look at the thesis of weighted random sampling ;
+* 

@@ -39,6 +39,24 @@ class HuffmanTree {
 
  public:
   HuffmanTree(std::unordered_map<std::string, uint32_t> input_freq);
+  ~HuffmanTree() {
+    // after we use this tree, we should delete this tree
+    std::queue<Node*> q;
+    if (m_root != nullptr) {
+      q.push(m_root);
+    }
+    while (!q.empty()) {
+      Node* node = q.front();
+      q.pop();
+      if (node->left != nullptr) {
+        q.push(node->left);
+      }
+      if (node->right != nullptr) {
+        q.push(node->right);
+      }
+      delete node;
+    }
+  }
   void Serilize(std::string file_name);  // print huffman tree
 
  private:

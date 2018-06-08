@@ -2,6 +2,8 @@
 
 ##### Problem description
 
+---
+
 ##### Algorithm description and certification
 
 ##### Code

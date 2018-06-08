@@ -33,10 +33,10 @@ int main() {
 
   //   Test case 2:
   goods.clear();
-  goods.push_back(Goods(4, 3, 0));
-  goods.push_back(Goods(5, 4, 1));
-  goods.push_back(Goods(3, 2, 2));
-  capacity = 7;
+  goods.push_back(Goods(4, 3, 0, 2));
+  goods.push_back(Goods(5, 4, 1, 2));
+  goods.push_back(Goods(3, 2, 2, 2));
+  capacity = 10;
   Knapsack knapsack1(goods, capacity);
 
   // Check the input and output
@@ -53,6 +53,12 @@ int main() {
   knapsack1.SolveZeroOneKnapsack();
   Serialize(knapsack1.m_optimal_comb);
   std::cout << "Max value of 0/1 knapsack: " << knapsack1.m_max_value
+            << std::endl;
+
+  std::cout << "Optimal combination of bounded knapsack:" << std::endl;
+  knapsack1.SolveBoundedKnapsack();
+  Serialize(knapsack1.m_optimal_comb);
+  std::cout << "Max value of bounded knapsack: " << knapsack1.m_max_value
             << std::endl;
   return 0;
 }
