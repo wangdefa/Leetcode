@@ -24,7 +24,7 @@
 
   - [ ] [Sort](./basic_data_structure/sort.md)  
   - [ ] [Divide and Conquer](./basic_data_structure/divide_conquer.md)
-  - [ ] [Huffman Tree](./basic_data_structure/huffman_tree.md)
+  - [x] [Huffman Tree](./basic_data_structure/huffman_tree.md)
   - [x] [Random](./basic_data_structure/random.md)
 
 --
@@ -46,7 +46,7 @@
 
 
 ### Dynamic Programming
-- [ ] [Knapsack](./dynamic_programming/knapsack.md)
+- [x] [Knapsack](./dynamic_programming/knapsack.md)
 
 
 
