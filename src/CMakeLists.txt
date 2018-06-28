@@ -96,3 +96,34 @@ add_executable(bit_set ${SRC_bit_set})
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ./string/)
 set(SRC_str_str ./string/str_str/str_str.cpp)
 add_executable(str_str ${SRC_str_str})
+
+# Add source files and build
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ./string/)
+set(SRC_anagrams ./string/anagrams/is_anagrams.cpp)
+add_executable(anagrams ${SRC_anagrams})
+
+# Add source files and build
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ./string/)
+set(SRC_lcss ./string/lcss/lcss.cpp)
+add_executable(lcss ${SRC_lcss})
+
+# Add source files and build
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ./string/)
+set(SRC_rotate_str ./string/rotate_str/rotate_str.cpp)
+add_executable(rotate_str ${SRC_rotate_str})
+
+# Add source files and build
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ./string/)
+set(SRC_lps ./string/lps/lps.cpp)
+add_executable(lps ${SRC_lps})
+
+# Add source files and build
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ./string/)
+set(SRC_wild_match ./string/wild_match/wild_match.cpp)
+add_executable(wild_match ${SRC_wild_match})
+
+
+# Add source files and build
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ./integer_array/)
+set(SRC_find_median ./integer_array/find_median/find_median.cpp)
+add_executable(find_median ${SRC_find_median})

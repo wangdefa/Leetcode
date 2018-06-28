@@ -1,8 +1,10 @@
+[TOC]
+
 #### Divide and conquer
 
-##### Problem description
-
 ---
+
+##### Problem description
 
 ##### Algorithm description and certification
 

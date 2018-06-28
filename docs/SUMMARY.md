@@ -32,6 +32,8 @@
 ### String
 
 * [String](./string/string.md)
+* [KMP](./string/string_match.md)
+* 
 
 --
 
