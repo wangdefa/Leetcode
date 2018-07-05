@@ -127,3 +127,9 @@ add_executable(wild_match ${SRC_wild_match})
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ./integer_array/)
 set(SRC_find_median ./integer_array/find_median/find_median.cpp)
 add_executable(find_median ${SRC_find_median})
+
+
+# Add source files and build
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ./binary_search/)
+set(SRC_binary_search ./binary_search/binary_search.cpp)
+add_executable(binary_search ${SRC_binary_search})
