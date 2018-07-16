@@ -133,3 +133,8 @@ add_executable(find_median ${SRC_find_median})
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ./binary_search/)
 set(SRC_binary_search ./binary_search/binary_search.cpp)
 add_executable(binary_search ${SRC_binary_search})
+
+# Add source files and build
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ./bit_manipulation/)
+set(SRC_bit_manipulation ./bit_manipulation/bit_manipulation.cpp)
+add_executable(bit_manipulation ${SRC_bit_manipulation})
