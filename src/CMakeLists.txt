@@ -138,3 +138,8 @@ add_executable(binary_search ${SRC_binary_search})
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ./bit_manipulation/)
 set(SRC_bit_manipulation ./bit_manipulation/bit_manipulation.cpp)
 add_executable(bit_manipulation ${SRC_bit_manipulation})
+
+# Add source files and build
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ./linked_list/)
+set(SRC_linked_list1 ./linked_list/linked_list.cpp)
+add_executable(linked_list1 ${SRC_linked_list1})
