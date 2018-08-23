@@ -22,6 +22,20 @@ class Solution {
         TreeNode *mover = root;
         std::stack<TreeNode *> stack_root;
 
+        while (mover != NULL || !stack_root.empty()) {
+            if (mover != NULL) {
+                stack_root.push(mover);
+                mover = mover->left;
+            }
+            else {
+                mover = stack_root.top();
+                if (mover->right == NULL) {
+                    result.push_back(mover->val);
+                    stack_root.pop();
+                }
+            }
+        }
+
         while (mover != NULL) {
             // move along the left until we get the first element (left most node)
             while (mover != NULL) {
