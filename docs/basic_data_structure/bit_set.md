@@ -2,32 +2,40 @@
 
 
 
-## Bit Set
+# Bit Set
 
 [TOC]
 
 In this part, we will focus on the bit set related algorithm, such as **sort of big data**, **search of big data**, **remove duplicate of big data**, **bloom filter**, etc.  
-Bit set 可以被视为集合[Set](https://en.wikipedia.org/wiki/Set_(abstract_data_type))这种数据结构， 但是二者之间的主要差异是Bit set 一般仅仅用一个或者几个bit来表示一个元素, 而Set需要存储元素本身。
 
-### Sort/Search/Remove duplicates using bitset
+Bit set 可以被视为集合 [Set](https://en.wikipedia.org/wiki/Set_(abstract_data_type)) 这种数据结构， 但是二者之间的主要差异是Bit set 一般仅仅用一个或者几个bit来表示一个元素, 而Set需要存储元素本身。
 
----
 
-1. Sort: 使用 bit set 数据结构对数据进行排序，假设所有的数据不会重复；  
-2. Search: 使用 bit set 实现一个set数据结构，从而进行检测数据是否在集合当中；  
-3. Remove duplicates: 使用 bit set 实现一个set数据结构，从而对数据进行去重；  
-   以上三种应用的方式都非常类似，以下仅仅以sort为例进行说明。
 
-#### Problem description
+## Sort/Search/Remove duplicates
 
-给定一组不含重复元素的数据(数据的数量非常多, 难以放入内存)以及其**范围**，给出其排列后的结果(**排序问题**)。  
-eg.  
+| Function          | Description                                                  |
+| ----------------- | ------------------------------------------------------------ |
+| Sort              | 使用 bit set 数据结构对数据进行排序，假设所有的数据不会重复  |
+| Search            | 使用 bit set 实现一个 set 数据结构，从而进行检测 $\textcolor{green}{数据是否在集合当中}$ |
+| Remove duplicates | 使用 bit set 实现一个 set 数据结构，从而 $\textcolor{green}{对数据进行去重}$ |
+
+以上三种应用的方式都非常类似，以下仅仅以sort为例进行说明。
+
+
+
+### Problem description
+
+给定一组不含重复元素的数据(数据的数量非常多, 难以放入内存)以及其 **范围**，给出其排列后的结果(**排序问题**)。  
+eg: 
 	input   :  {${1, 3, 2, 5}$}, $10$
 	output :  {${1,2,3,5}$}
 
-#### Algorithm description and certification
 
-假设输入为： $arr[n]$, ${arr[n]}\leq{N}$那么可以有如下算法：
+
+### Algorithm description and certification
+
+假设输入为： $arr[n]$, ${arr[n]}\leq{N}$ 那么可以有如下算法：
 
   ```cpp
   // 1. Create the bit set data structure
@@ -65,23 +73,23 @@ void Sort(std::vector<uint32_t> *src) {
 
 ```
 
-#### Reference
+### Reference
 
 [Bitmap in big data](https://www.cnblogs.com/yangjiannr/p/da-shu-ju-chu-libitmap.html)
 
-### Bloom filter
 
----
+
+## Bloom filter
 
 Bloom filter与 Bit set非常类似，其一般被用于判断某个元素是否存在与某个集合当中。与Bit Set 不同的是，Bloom filter需要用多个比特来表示一个元素是否存在(多个元素也可以复用这些bit)。
 
-#### Problem description
+### Problem description
 
 某些存储系统的设计中，会存在空查询缺陷：当查询一个**不存在的key**时，需要访问慢设备（由于cache并没有hit中，因此需要访问磁盘等），从而导致效率低下。　
 1. 对于某些系统，Value 保存在磁盘中，访问磁盘需要花费大量时间，然而使用布隆过滤器可以快速判断某个Key对应的Value是否存在，从而直接将空查询直接忽略，因此可以避免很多不必要的磁盘IO操作。 
 2. 在前端系统当中，如果经常发生空查询操作，那么会引起大量不必要的服务器请求。
 
-#### Algorithm description and certification
+### Algorithm description and certification
 
 * 算法
   1. 生成$K$个hash函数；
@@ -199,7 +207,7 @@ $$
 
   $\therefore$ 当我们每次都选用最优的hash函数个数时，其误判的概率与装填因子$r$，hash函数个数$K$之间的关系如下图所示：
 
-  <img src="assets/error_bloom_filter.jpg" style="zoom:50%" />
+  <img src="assets/error_bloom_filter.jpg" style="zoom:80%" />
 
   ```matlab
   % Code of the beyond figure.
@@ -223,11 +231,11 @@ $$
 
   
 
-  #### Code
+  ### Code
 
   
 
-  #### Reference
+  ### Reference
 
 1. [布隆过滤器(Bloom Filter)详解](https://www.cnblogs.com/liyulong1982/p/6013002.html)
 2. [Wikipedia: Bloom Filter](https://en.wikipedia.org/wiki/Bloom_filter)
