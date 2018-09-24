@@ -28,7 +28,10 @@
 
 ## Integer Array
 
-- [ ] 
+- [x] [First missing positive](integer_array/first_missing_positive.md)
+- [x] [Gray code](integer_array/gray_code.md)
+- [x] [Is subsequence](integer_array/is_subsequence.md)
+- [x] [Number of Matching Subsequences](integer_array/number_of_matching_subsequences.md)
 
 
 
